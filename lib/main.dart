@@ -1,10 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:tarea6/Model/element.dart';
+import 'package:tarea6/widget/about.dart';
 import 'package:tarea6/widget/list.dart';
 import 'package:tarea6/widget/summary_element.dart';
+import 'package:tarea6/widget/web_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -26,27 +25,13 @@ class MyApp extends StatelessWidget {
         primaryColorDark: Colors.purple,
         scaffoldBackgroundColor: Colors.black
       ),
-      initialRoute: "/",
+      initialRoute: ListElement.routerName,
       routes:{
-        "/": (context) => const  MyHomePage(title: 'Flutter Demo Home Page'),
-        "/summary": (context) => const SummaryElement()
+        ListElement.routerName: (context) => const  ListElement(),
+        SummaryElement.routerName: (context) => const SummaryElement(),
+        WikipediaView.routerName: (context) => const WikipediaView(),
+        About.routerName: (context) => About()
       },
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
- @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: const ListElement()
     );
   }
 }
