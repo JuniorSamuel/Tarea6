@@ -22,9 +22,9 @@ class _ListElement extends State<ListElement> {
   }
 
   void loadJSON() {
-    rootBundle.loadString("data/elementos.json").then((value) => {
-          _elementState(value)
-        });
+    rootBundle
+        .loadString("data/elementos.json")
+        .then((value) => {_elementState(value)});
   }
 
   void _elementState(String json) {
@@ -42,9 +42,13 @@ class _ListElement extends State<ListElement> {
         appBar: AppBar(
           title: const Text("Periodic Table"),
           actions: <Widget>[
-            IconButton(onPressed: () {
-              Navigator.of(context).pushNamed(About.routerName);
-            }, icon: const Icon(Icons.info_outline_rounded))
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(About.routerName);
+              },
+              icon: const Icon(Icons.info_outline_rounded),
+              tooltip: "About",
+            )
           ],
         ),
         body: GridView.count(
@@ -72,10 +76,8 @@ class _ListElement extends State<ListElement> {
                 ),
                 Text(_elements[index].name)
               ],
-            )
-          );
-        }),
-      )
-    );
+            ));
+          }),
+        ));
   }
 }

@@ -23,30 +23,49 @@ class About extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(top: 10),
                   child: const Text(
-                  "Junior Samuel De Los Santos Velazquez",
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue),
-                      textAlign: TextAlign.center,
+                    "Junior Samuel De Los Santos Velazquez",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10),
-                  child: const Text("2022/02/06", style: style,),
+                  child: const Text(
+                    "06/02/2022",
+                    style: style,
+                  ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10),
-                  child: const Text("Mobile App development", style: style,),
+                  child: const Text(
+                    "Mobile App development",
+                    style: style,
+                  ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10),
-                  child: const Text("Teacher: Amadis ", style: style,),
+                  child: const Text(
+                    "juniorvelazquezmt19@gmail.com",
+                    style: style,
+                  ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10),
-                  child: const  Text("Version: 1.0.0", style: style,),
-                ),               
+                  child: const Text(
+                    "(809) 607 - 8829",
+                    style: style,
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  child: const Text(
+                    "Version: 1.0.1",
+                    style: style,
+                  ),
+                ),
               ],
             ),
           ),
